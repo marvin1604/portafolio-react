@@ -1,0 +1,67 @@
+#soy-yo{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#soy-yo .container-soy-yo{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 20px;
+}
+
+#soy-yo .img-container{
+    margin: 0px;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: mov-img;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes mov-img {
+    from{
+        transform: translateY(50px);
+        opacity: 0.5;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+  }
+#soy-yo .img-container img{
+    width: 60%;
+    border-radius: 50%;
+}
+#soy-yo .quien-soy{
+    animation-name: quien-soy-yo;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes quien-soy-yo {
+    from{
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+  }
+
+#soy-yo .texto {
+    width: 40%;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#soy-yo .texto a{
+    font-size: 1.4rem;
+    color: rgb(6, 51, 51);
+}

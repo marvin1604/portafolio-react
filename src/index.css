@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+  font-size: 62.5%;        
+  font-family: 'Roboto Mono', monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #E0EAFC;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1{ font-size: 4rem}
+h2{ font-size: 2.2rem}
+h3{ font-size: 2rem}
+p{ font-size: 1rem}
+ul{ list-style: none}
+li{ font-size: 1.2rem;}
+a{ font-size: 1rem;}
+button{
+    font-size: 1rem;
+    padding: 15px 15px;
+    border-radius: 15px;
+    border: 2px solid grey;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.5);
+    color: white;
+    background-color: rgb(17, 159, 159);
+}
+button:hover{   
+    background-color: rgb(10, 96, 96);
+    cursor: pointer;
+}
