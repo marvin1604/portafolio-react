@@ -1,0 +1,102 @@
+#tecnologias{
+    width: 100%;
+    min-height: calc(100vh - 70px);
+    margin-top: 20px;
+}
+#tecnologias h2{
+    margin: 30px;
+    margin-top: 80px;
+    font-size: 3rem;
+    color: rgb(2, 2, 96);
+}
+
+#tecnologias .container-tecnologias{
+    width: 100%;
+    min-height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#tecnologias .container-tecnologias .container-images-tecnologias{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+#tecnologias .container-tecnologias .container-images-tecnologias div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border-radius: 20%;
+    font-size: 1.4rem;
+    color: rgb(2, 2, 96);
+    width: 80px;
+    
+}
+
+#tecnologias .container-tecnologias .container-images-tecnologias img{
+     width: 60px;
+     margin: 10px;
+     animation: animacion-tecnologias 4s ease;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+@keyframes animacion-tecnologias{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+#tecnologias .container-tecnologias .container-images-cursos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#tecnologias .container-tecnologias  h4 a{
+    font-size: 1.4rem;
+    color: rgb(6, 51, 51);
+    transition: all 1s;
+}
+#tecnologias .container-tecnologias  h4 a:hover{
+    color: rgb(27, 181, 181);
+}
+#tecnologias .container-tecnologias .container-images-cursos div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 8px;
+    width: 220px;
+    height: 220px;
+    max-width: 300px;
+    border-radius: 20px;
+    background-color: rgb(243, 243, 240);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+#tecnologias .container-tecnologias .container-images-cursos p{
+    margin: 10px 0;
+    color: rgb(2, 2, 96);
+    font-weight: bold;
+    text-align: center;
+}
+#tecnologias .container-tecnologias .container-images-cursos button{
+    font-size: 1rem;
+    margin-bottom: 8px;
+    height: 30px;
+    display: flex ;
+    align-items: center;
+}
+#tecnologias .container-tecnologias .container-images-cursos img{
+    width: 80px;     
+    margin: 10px;    
+}
+#tecnologias .container-tecnologias .container-images-cursos img:hover{
+    filter: brightness(100%);
+}

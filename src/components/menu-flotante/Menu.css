@@ -1,0 +1,31 @@
+.menu-cantactame-desktop{
+    width: 60px;
+    height: 100px;
+    padding: 8px 0;
+    background: rgba(2, 2, 96, 0.811);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: fixed;
+    bottom: 50px;
+    left: 40px;
+    z-index: 1;
+    
+}
+.menu-cantactame-desktop a{
+    color: rgb(143, 143, 155);
+    font-size: 2.6rem;
+    text-decoration: none;
+    transition: all 1s;
+}
+.menu-cantactame-desktop a:hover{
+    color: rgb(15, 2, 44);
+}
+
+@media(max-width:650px){
+    .menu-cantactame-desktop{
+        top: 600px;
+        left: 10px;
+    }
+}

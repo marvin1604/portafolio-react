@@ -1,5 +1,5 @@
 #hero {
-    width: 100%;
+    width: 95%;
     height: 100vh;
     display: flex;
     justify-content: space-evenly;
@@ -9,6 +9,7 @@
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: auto;
+    margin: 0 10px;
 }
 #hero .left{
     width: 330px;
@@ -105,5 +106,20 @@
     to{
         opacity: 1;
         transform: translateX(0);
+    }
+}
+@media(max-width:650px) {
+    #hero{
+        display: block;
+        justify-content: center;
+    }
+    #hero .left{
+        margin-top: 100px;
+        width: 100%;
+        align-items: center;
+    }
+    #hero .rigth{
+        width: 100%;
+        align-items: center;
     }
 }

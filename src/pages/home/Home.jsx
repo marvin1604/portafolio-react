@@ -1,7 +1,7 @@
 import React from 'react'
 import "../home/Home.css"
 
-import  foto from "../../assest/foto2.png"
+
 import html from "../../assest/tecnologias/html5-original.svg"
 import css from "../../assest/tecnologias/css3-original.svg"
 import javascript from "../../assest/tecnologias/javascript-original.svg"

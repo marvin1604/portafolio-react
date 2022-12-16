@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 80px;
 }
 #soy-yo .container-soy-yo{
     display: flex;
@@ -37,6 +38,7 @@
     border-radius: 50%;
 }
 #soy-yo .quien-soy{
+    text-align: left;
     animation-name: quien-soy-yo;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -63,5 +65,20 @@
 
 #soy-yo .texto a{
     font-size: 1.4rem;
-    color: rgb(6, 51, 51);
+    color: rgb(2, 2, 96);
+}
+@media(max-width:650px){
+    #soy-yo{
+        height: 130vh;
+    }
+    #soy-yo .container-soy-yo{
+        display: flex;
+        flex-direction: column;
+    }
+    #soy-yo .img-container {
+        width: 100%;
+    }
+    #soy-yo .texto {
+        width: 100%;
+    }
 }

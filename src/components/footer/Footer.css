@@ -1,0 +1,33 @@
+#footer{
+    width: 100%;
+    background-color: rgb(245,245,245);
+    padding: 10px ;
+    text-align: center;
+}
+#footer p{    
+    color: rgb(2, 2, 96);
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 4px;
+}
+#footer #buttons-footer{
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+}
+#buttons-footer a{
+    text-decoration: none;
+    font-size: 35px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+    background-color: rgb(2, 2, 96);
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0, 0.5);
+    transition: all .4s ease-in-out;
+}
+#buttons-footer a:hover{
+    transform: scale(1.2);
+}

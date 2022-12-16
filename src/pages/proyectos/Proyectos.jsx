@@ -10,6 +10,7 @@ const Proyectos = () => {
       <div class="proyectos">
        { data.map((item) => 
        <Card 
+       key={item.id}
        nombre={item.nombre}
        descripcion={item.descripcion}
        imagen={item.imagen}
