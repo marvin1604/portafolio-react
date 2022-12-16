@@ -1,7 +1,6 @@
 import React from 'react'
 import "./Card.css"
 
-import web from "../../assest/nuevos/browser-website-svgrepo-com.svg"
 
 const Card = ({nombre,descripcion,url,imagen,github}) => {
   return (
