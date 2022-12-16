@@ -19,10 +19,10 @@ const Menumovil = ({setState}) => {
         </ul>
         <h3> Contactame:</h3>
         <ul class="menu-cantactame">
-            <a href="https://www.instagram.com/developer_python_/" class="fab fa-instagram"></a>
-            <a href="https://github.com/marvin1604" class="fab fa-github"></a>
-            <a href="https://www.linkedin.com/in/walter-rodriguez-sanchez-67bb8a1b5/" class="fab fa-linkedin"></a>
-            <a href="https://twitter.com/MarvinR89804251" class="fa-brands fa-twitter"></a>
+            <a href="https://www.instagram.com/developer_python_/" class="fab fa-instagram"> </a>
+            <a href="https://github.com/marvin1604" class="fab fa-github"> </a>
+            <a href="https://www.linkedin.com/in/walter-rodriguez-sanchez-67bb8a1b5/" class="fab fa-linkedin"> </a>
+            <a href="https://twitter.com/MarvinR89804251" class="fa-brands fa-twitter"> </a>
         </ul>
     </div>
   )
