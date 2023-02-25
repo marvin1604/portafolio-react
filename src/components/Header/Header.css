@@ -2,7 +2,7 @@
     max-width: 1400px;
     position:fixed;
     display: flex;
-    height: 70px;
+    height: 75px;
     width: 100%;
     padding-top: 4px;
     backdrop-filter: blur(10px);
@@ -22,7 +22,8 @@
     font-size: 1.8rem;
 }
 .container .navbar-left img{
-    width: 230px;
+    margin-top: 2px;
+    width: 300px;
 }
 .container .navbar-rigth{
     display: flex;

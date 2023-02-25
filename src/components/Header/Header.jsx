@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import "./Header.css"
 // import { BsFillBrightnessHighFill } from "react-icons/bs";
 
-import logo from "../../assest/logo-marvin1604-removebg-preview.png"
+import logo from "../../assest/logoMarvin.png"
 import Menumovil from '../menumovil/Menumovil'
 
 const Header = () => {
