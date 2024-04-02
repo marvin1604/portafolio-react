@@ -6,6 +6,13 @@ const data=[
     //     "url" : "https://customer-scoop.netlify.app/",
     //     "github" : "https://github.com/marvin1604/customer-scoops"
     // },
+    {   "id" : "8",
+        "nombre" : "ViteShop",
+        "descripcion" : "Tienda Online con registro e inicio de Sesion, hecha con Vite.",
+        "imagen" : "https://i.postimg.cc/pTRZwP09/viteShop.png",
+        "url" : "https://viteshop.netlify.app/",
+        "github" : "https://github.com/marvin1604/ViteShop"
+    },
     {
         "id" : "7",
         "nombre" : "Tienda Online",

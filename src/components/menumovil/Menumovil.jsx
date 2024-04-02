@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Menumovil.css"
 
-import logo from "../../assest/logoMarvin.png"
+import logo from "../../assest/logo-yo.png"
 const Menumovil = ({setState, idioma}) => {
   return (
     <div className="menu-mobile-container">

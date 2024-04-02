@@ -23,7 +23,7 @@
 } 
 .menu-mobile-container .logo img{
     margin: 20px;
-    width: 240px;
+    width: 160px;
 }
 .menu-mobile-container h3{
     margin-top: 10px;
@@ -48,9 +48,9 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 20px;
-    gap: 10px;
+    gap: 25px;
     
 }
 .menu-mobile-container .menu-cantactame a{
-    font-size: 4rem;
+    font-size: 3rem;
 }
