@@ -4,7 +4,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 80px;
+    color: #1f2b3e;
+    background: #f3f4f5;
+    background-image: url(../../assest/nuevos/waveSvg2.svg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    @media(max-width:600px){
+        height: auto;
+    }
 }
 #soy-yo .container-soy-yo{
     display: flex;
@@ -21,7 +29,7 @@
     align-items: center;
     animation-name: mov-img;
     animation-duration: 2s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: initial;
 }
 @keyframes mov-img {
     from{
@@ -41,7 +49,7 @@
     text-align: left;
     animation-name: quien-soy-yo;
     animation-duration: 2s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: initial;
 }
 @keyframes quien-soy-yo {
     from{
@@ -65,11 +73,11 @@
 
 #soy-yo .texto a{
     font-size: 1.4rem;
-    color: rgb(2, 2, 96);
+    color: #1f2b3e;
 }
 @media(max-width:650px){
     #soy-yo{
-        height: 130vh;
+        margin-top: 70px;;
     }
     #soy-yo .container-soy-yo{
         display: flex;

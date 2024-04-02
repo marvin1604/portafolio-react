@@ -2,19 +2,19 @@
     width: 60px;
     height: 100px;
     padding: 8px 0;
-    background: rgba(2, 2, 96, 0.811);
+    background: #3D5A80;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     gap: 12px;
     position: fixed;
-    bottom: 50px;
+    bottom: 50%;
     left: 40px;
     z-index: 1;
     
 }
 .menu-cantactame-desktop a{
-    color: rgb(143, 143, 155);
+    color: white;
     font-size: 2.6rem;
     text-decoration: none;
     transition: all 1s;

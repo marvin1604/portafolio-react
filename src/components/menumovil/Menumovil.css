@@ -6,7 +6,7 @@
     flex-direction: column;
     width: 100%;
     height: 100vh;
-    background: rgb(246, 243, 243);
+    background: #4d648d;
     text-align: start;
 }
 .menu-mobile-container h2{
@@ -41,7 +41,7 @@
 }
 .menu-mobile-container a{
     text-decoration: none;
-    color: rgb(2, 2, 96);    
+    color: #FFFFFF;    
     font-size: 1.4rem;
 }
 .menu-mobile-container .menu-cantactame{

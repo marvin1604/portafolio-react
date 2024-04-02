@@ -3,7 +3,8 @@ import "../quiensoy/Quiensoy.css"
 
 import imagenyo from "../../assest/foto.jpg"
 import curriculum from "../../assest/curriculum/FrontendDeveloper_walterrodriguez_CV.pdf"
-const Quiensoy = () => {
+import curriculum2 from "../../assest/curriculum/FullStackDeveloper_WalterRodriguez_cv.pdf"
+const Quiensoy = ({idioma}) => {
   return (
     <div id='soy-yo'>
         <div className="container-soy-yo">
@@ -11,16 +12,17 @@ const Quiensoy = () => {
                 <img src={imagenyo} alt="" />
             </div> 
             <div className="texto">
-                <h2 className='quien-soy'>Soy <span className="color-acento">Walter Rodríguez</span> </h2>
-                <p>Hola, soy electronico de formación y desarrollador Frontend con Reactjs, me he estado formando en Platzi como desarrollador web. Manejo lenguaje Python, HTML, CSS, JavaScript, Manejo de Git y Github, Reactjs,  Nodejs y Express para el backend. Tengo experiencia en proyectos personales de desarrollo de software.
+                <h2 className='quien-soy'>{idioma?.soyyo?.titulo}</h2>
+                <p>{idioma?.soyyo?.parrafo1}</p>
+                <p>{idioma?.soyyo?.parrafo2}</p>
+                <p>{idioma?.soyyo?.parrafo3}
                 </p>
-                <p>
-                Me apasiona la tecnología, me encanta que mi trabajo pueda convertir ideas en algo real y que mejore la calidad de vida de las personas.
-                </p>
-                <p>
-                Quiero ser parte de una empresa donde pueda aportar mi conocimiento y mi talento.
-                </p>
-                <a href={curriculum} download="FrontendDeveloper_walterrodriguez_CV.pdf">Descarga mi curriculum Aquí</a>
+                {idioma?.soyyo?.download === 'ES'?
+                <a href={curriculum} download="FrontendDeveloper_walterrodriguez_CV.pdf">Descarga mi CV Aquí</a> : 
+<a href={curriculum2} download="FullStackDeveloper_WalterRodriguez_cv.pdf">Scarica il mio cv qui</a>
+                }
+                
+                
             </div>
         </div>
     </div>

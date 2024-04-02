@@ -1,13 +1,19 @@
 #tecnologias{
     width: 100%;
-    min-height: calc(100vh - 70px);
+    /* min-height: calc(100vh - 70px); */
+    min-height: 100vh;
     margin-top: 20px;
+    color: #FFFFFF;
 }
 #tecnologias h2{
-    margin: 30px;
     margin-top: 80px;
-    font-size: 3rem;
-    color: rgb(2, 2, 96);
+    font-size: 2.2rem;
+    color: #FFFFFF;
+}
+#tecnologias h3{
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    margin-top: 0;
 }
 
 #tecnologias .container-tecnologias{
@@ -33,9 +39,8 @@
     margin: 10px;
     border-radius: 20%;
     font-size: 1.4rem;
-    color: rgb(2, 2, 96);
+    color: #FFFFFF;
     width: 80px;
-    
 }
 
 #tecnologias .container-tecnologias .container-images-tecnologias img{
@@ -44,6 +49,10 @@
      animation: animacion-tecnologias 4s ease;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+    
 }
 @keyframes animacion-tecnologias{
     from{
@@ -63,6 +72,7 @@
     font-size: 1.4rem;
     color: rgb(6, 51, 51);
     transition: all 1s;
+    color: #FFFFFF;
 }
 #tecnologias .container-tecnologias  h4 a:hover{
     color: rgb(27, 181, 181);
@@ -82,7 +92,7 @@
 }
 #tecnologias .container-tecnologias .container-images-cursos p{
     margin: 10px 0;
-    color: rgb(2, 2, 96);
+    color: #FFFFFF;
     font-weight: bold;
     text-align: center;
 }

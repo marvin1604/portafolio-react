@@ -2,12 +2,14 @@ body {
   margin: 0;
   scroll-behavior: smooth;
   font-size: 62.5%;        
-  font-family: 'Roboto Mono', monospace;
+  /* font-family: 'Roboto Mono', monospace;*/
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: #E0EAFC;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -moz-osx-font-smoothing: grayscale; 
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  background: #1f2b3e; 
+  /* background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  Chrome 10-25, Safari 5.1-6 */
+  /* background: linear-gradient(to right, #CFDEF3, #E0EAFC); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 code {

@@ -1,28 +1,32 @@
 #hero {
-    width: 95%;
+    width: 100%;
     height: 100vh;
     display: flex;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     align-items: center;
-    gap: 50px;
-    background-image: url(../../assest/nuevos/wave.svg);
-    background-position: bottom;
+    position: relative;
+    /* gap: 50px; */
+    /* background-image: url(https://images.pexels.com/photos/2085998/pexels-photo-2085998.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); */
+    /* background: rgba(10, 10,10, 0.2); */
+    /* background-position: bottom;
     background-repeat: no-repeat;
-    background-size: auto;
-    margin: 0 10px;
+    background-size: 100vw; */
+    /* margin: 0 10px; */
 }
 #hero .left{
-    width: 330px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    color: rgb(2, 2, 96);
+    align-items: center;
+    color: #FFFFFF;
+    position: absolute;
 }
 #hero .left .container-tec{
-    width: 100%;
+    width: auto;
     display: flex;
     justify-content: center;
+    /* background:yellow; */
     animation: animacion-tec 2s ease;
     animation-fill-mode: forwards;
 }
@@ -40,9 +44,12 @@
 #hero .left .container-tec img{
     width: 24px;
     margin-right: 10px;
+    background:rgba(255,255,255,0.9);
+    border-radius: 50%;
+    padding: 2px;
 }
 .titulo1{
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     margin-bottom: 0;
 }
 .titulo1::before{
@@ -63,6 +70,13 @@
   }
 .titulo2{
     margin: 0;
+    margin: 0 0 12px 0;
+    /* padding: 0 80px; */
+    background: rgb(195,169,34);
+background: linear-gradient(0deg, rgba(195,169,34,1) 0%, rgba(255,255,255,1) 100%);
+
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
 .titulo3{
     margin: 0 0 12px 0;
@@ -71,11 +85,15 @@
     font-family: monospace;
     white-space: nowrap;
     border-right: 4px solid;
-    width: 23ch;
+    width: 28ch;
     
-    animation: typing 4s steps(23),
+    animation: typing 4s steps(28),
     blink .5s infinite step-end alternate;
     overflow: hidden;
+
+    @media(max-width:600px){
+        font-size: 20px;
+    }
 }
 
 @keyframes typing{
@@ -114,8 +132,11 @@
         justify-content: center;
     }
     #hero .left{
-        margin-top: 100px;
+        position:absolute;
+        top: 0;
+        left: 2%;
         width: 100%;
+        height: 100%;
         align-items: center;
     }
     #hero .rigth{
