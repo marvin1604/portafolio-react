@@ -65,7 +65,7 @@ const Contactame = () => {
 
   return (
     <Container id="contactame">
-      <ContainerForm imagenFondo={imagenFondo}>
+      <ContainerForm $imagenFondo={imagenFondo}>
         <h2>Contactame</h2>
         <Form onSubmit={handleSubmit}>
           <label htmlFor="name">Nombre:</label>
@@ -76,8 +76,8 @@ const Contactame = () => {
             value={formData.name}
             onChange={handleChange}
             required
-            hasError={
-              !validarNombre(formData.name) && validarNombre(formData.name)
+            $hasError={
+              !validarNombre(formData.name) && formData.name.length > 0
             }
           />
           <br />
@@ -90,7 +90,7 @@ const Contactame = () => {
             value={formData.email}
             onChange={handleChange}
             required
-            hasError={
+            $hasError={
               !validarEmail(formData.email) && formData.email.length > 0
             }
           />
@@ -154,7 +154,7 @@ const ContainerForm = styled.div`
       rgba(40, 42, 55, 1) 50%,
       rgba(40, 42, 55, 0.7)
     ),
-    url(${(props) => props.imagenFondo});
+    url(${(props) => props.$imagenFondo});
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -217,7 +217,7 @@ const FormInput = styled.input`
   color: #f4f6f9;
   margin-bottom: 10px;
   border-radius: 10px;
-  border-color: ${(props) => (props.hasError === true ? "red" : "none")};
+  border: ${(props) => (props.$hasError === true ? "2px solid red" : "1px solid #555")};
 
   &: focus {
     outline: none;
@@ -228,12 +228,10 @@ const FormTextArea = styled.textarea`
   max-width: 500px;
   padding: 17px 14px;
   background-color: #333646;
-  // border: 1px solid red;
-  // border-color: #ccc;
   color: #f4f6f9;
   margin-bottom: 10px;
   border-radius: 10px;
-  border-color: ${(props) => (props.hasError === true ? "red" : "none")};
+  border: ${(props) => (props.$hasError === true ? "2px solid red" : "1px solid #555")};
 
   &: focus {
     outline: none;

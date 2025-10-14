@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Tecnologias.css"
+import { useLanguage } from '../../contexts/LanguageContext'
 
 import html from "../../assest/tecnologias/html5-original.svg"
 import css from "../../assest/tecnologias/css3-original.svg"
@@ -12,12 +13,13 @@ import git from "../../assest/tecnologias/git-original.svg"
 import python from "../../assest/tecnologias/python-original.svg"
 import next from "../../assest/tecnologias/nextjs-original-wordmark.svg"
 
-const Tecnologias = ({idioma}) => {
+const Tecnologias = () => {
+  const { language } = useLanguage();
   return (
     <div id="tecnologias">
         <div className="container-tecnologias">
-            <h2>{idioma?.tecnologias?.titulo}:</h2>
-            <h3>{idioma?.tecnologias?.titulo2}</h3>
+            <h2>{language?.tecnologias?.titulo}:</h2>
+            <h3>{language?.tecnologias?.titulo2}</h3>
         <div className="container-images-tecnologias">
             <div>
             <img src={html} alt="" />
@@ -40,7 +42,7 @@ const Tecnologias = ({idioma}) => {
             <p>NextJs</p>
             </div>
         </div>
-        <h3>{idioma?.tecnologias?.titulo3}</h3>
+        <h3>{language?.tecnologias?.titulo3}</h3>
         <div className="container-images-tecnologias">
             <div>
             <img src={node} alt="" />

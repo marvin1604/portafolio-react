@@ -1,46 +1,42 @@
 import './App.css';
 import Header from "./components/Header/Header.jsx"
-import Proyectos from './pages/proyectos/Proyectos';
 import Home from './pages/home/Home';
-import Quiensoy from './pages/quiensoy/Quiensoy';
 import Menu from './components/menu-flotante/Menu';
-import Tecnologias from './pages/tecnologias/Tecnologias';
 import Footer from './components/footer/Footer';
-import Contactame from './pages/contactame/Contactame.jsx'
-import { useState } from 'react';
-import { dataEspañol } from './data/data.js';
-import { dataItaliano } from './data/data.js';
+import LoadingSpinner from './components/LoadingSpinner/LoadingSpinner';
+import { LanguageProvider } from './contexts/LanguageContext';
+import { lazy, Suspense } from 'react';
+
+// Lazy loading de componentes para mejor performance
+const Proyectos = lazy(() => import('./pages/proyectos/Proyectos'));
+const Quiensoy = lazy(() => import('./pages/quiensoy/Quiensoy'));
+const Tecnologias = lazy(() => import('./pages/tecnologias/Tecnologias'));
+const Contactame = lazy(() => import('./pages/contactame/Contactame.jsx'));
 
 function App() {
-
-
-  const [idioma, setIdioma] = useState(dataItaliano)
-  const [checked, setChecked] = useState(false)
-
-  const handleIdioma = () =>{
-    if(idioma === dataEspañol){
-      setIdioma(dataItaliano)
-      setChecked(false)
-      return
-    }
-    if(idioma === dataItaliano){
-      setIdioma(dataEspañol)
-      setChecked(true)
-      return
-    }
-  }
-
   return (
-    <div className="App">
-      <Header idioma={idioma} handleIdioma={handleIdioma} checked={checked}/>
-      <Home idioma={idioma}/>
-      <Menu/>
-      <Proyectos idioma={idioma}/>
-      <Quiensoy idioma={idioma}/>
-      <Tecnologias idioma={idioma}/>
-      <Contactame />
-      <Footer/>
-    </div>
+    <LanguageProvider>
+      <div className="App">
+        <Header />
+        <main>
+          <Home />
+          <Menu />
+          <Suspense fallback={<LoadingSpinner message="Cargando proyectos..." />}>
+            <Proyectos />
+          </Suspense>
+          <Suspense fallback={<LoadingSpinner message="Cargando información..." />}>
+            <Quiensoy />
+          </Suspense>
+          <Suspense fallback={<LoadingSpinner message="Cargando tecnologías..." />}>
+            <Tecnologias />
+          </Suspense>
+          <Suspense fallback={<LoadingSpinner message="Cargando contacto..." />}>
+            <Contactame />
+          </Suspense>
+        </main>
+        <Footer />
+      </div>
+    </LanguageProvider>
   );
 }
 

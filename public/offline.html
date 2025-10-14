@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sin conexión - Walter Rodriguez Portfolio</title>
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: #1f2b3e;
+      color: white;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+    
+    .offline-container {
+      max-width: 500px;
+      padding: 40px 20px;
+    }
+    
+    .offline-icon {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      opacity: 0.7;
+    }
+    
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 16px;
+      color: #17c784;
+    }
+    
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 24px;
+      opacity: 0.9;
+    }
+    
+    .retry-button {
+      background: #17c784;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    
+    .retry-button:hover {
+      background: #14a06f;
+    }
+    
+    .features-list {
+      margin-top: 40px;
+      text-align: left;
+    }
+    
+    .features-list h3 {
+      color: #17c784;
+      margin-bottom: 16px;
+    }
+    
+    .features-list ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .features-list li {
+      padding: 8px 0;
+      opacity: 0.8;
+    }
+    
+    .features-list li::before {
+      content: "✓ ";
+      color: #17c784;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="offline-container">
+    <div class="offline-icon">🌐</div>
+    <h1>Sin Conexión a Internet</h1>
+    <p>
+      Parece que no tienes conexión a internet en este momento. 
+      Algunas funciones del portfolio están disponibles offline.
+    </p>
+    
+    <button class="retry-button" onclick="location.reload()">
+      Reintentar Conexión
+    </button>
+    
+    <div class="features-list">
+      <h3>Disponible Offline:</h3>
+      <ul>
+        <li>Información básica del portfolio</li>
+        <li>Experiencia y habilidades</li>
+        <li>Algunos proyectos cacheados</li>
+        <li>Información de contacto</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    // Verificar conexión cada 5 segundos
+    setInterval(() => {
+      if (navigator.onLine) {
+        location.reload();
+      }
+    }, 5000);
+
+    // Escuchar eventos de conexión
+    window.addEventListener('online', () => {
+      location.reload();
+    });
+  </script>
+</body>
+</html>

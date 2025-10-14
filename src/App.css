@@ -1,10 +1,30 @@
 .App {
   text-align: center;
-  /* max-width: 1400px; */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
   overflow-x: hidden;
+  padding-top: 0; /* El header es fixed, no necesita padding */
+}
+
+/* Asegurar que el contenido no se superponga con el header */
+main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Smooth scroll para navegación */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optimizar scroll performance */
+* {
+  scroll-padding-top: 75px; /* Altura del header */
 }

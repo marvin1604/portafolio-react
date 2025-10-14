@@ -4,23 +4,64 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/icono.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <meta name="theme-color" content="#1f2b3e" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Walter Rodriguez - Desarrollador Full Stack especializado en React, Node.js y tecnologías modernas. Portfolio con proyectos innovadores y experiencia en desarrollo web." />
+    <meta name="keywords" content="Walter Rodriguez, Full Stack Developer, React, Node.js, JavaScript, Portfolio, Desarrollador Web, Frontend, Backend" />
+    <meta name="author" content="Walter Rodriguez" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Walter Rodriguez - Full Stack Developer Portfolio" />
+    <meta property="og:description" content="Desarrollador Full Stack con 2 años de experiencia. Especializado en React, Node.js y tecnologías modernas." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tudominio.com" />
+    <meta property="og:image" content="%PUBLIC_URL%/og-image.jpg" />
+    <meta property="og:locale" content="es_ES" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Walter Rodriguez - Full Stack Developer" />
+    <meta name="twitter:description" content="Portfolio de Walter Rodriguez, desarrollador Full Stack especializado en React y Node.js" />
+    <meta name="twitter:image" content="%PUBLIC_URL%/og-image.jpg" />
+    
+    <!-- Preconnect para optimización de fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Marvin1604</title>
+    
+    <!-- Preload de Font Awesome con optimización -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"></noscript>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Walter Rodriguez",
+      "jobTitle": "Full Stack Developer",
+      "description": "Desarrollador Full Stack con experiencia en React, Node.js y tecnologías modernas",
+      "url": "https://tudominio.com",
+      "sameAs": [
+        "https://github.com/marvin1604",
+        "https://linkedin.com/in/walter-rodriguez"
+      ],
+      "knowsAbout": ["React", "Node.js", "JavaScript", "Express", "MongoDB", "PostgreSQL", "Next.js"]
+    }
+    </script>
+    
+    <title>Walter Rodriguez - Full Stack Developer Portfolio</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      <div style="text-align: center; padding: 50px; font-family: Arial;">
+        <h1>JavaScript Requerido</h1>
+        <p>Este sitio requiere JavaScript para funcionar correctamente. Por favor, habilita JavaScript en tu navegador.</p>
+      </div>
+    </noscript>
     <div id="root"></div>
   </body>
 </html>
