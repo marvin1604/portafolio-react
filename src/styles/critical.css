@@ -1,0 +1,149 @@
+/* Critical CSS - Above the fold content */
+/* This CSS should be inlined in production for faster initial render */
+
+/* Reset crítico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos críticos del body */
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  background: #1f2b3e;
+}
+
+/* Estilos críticos de la App */
+.App {
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Header crítico */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 70px;
+  background: rgba(31, 43, 62, 0.95);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.navbar-left .logo img {
+  height: 40px;
+  width: auto;
+}
+
+/* Hero section crítico */
+#hero {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#hero .left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  position: absolute;
+  z-index: 2;
+}
+
+/* Títulos críticos */
+.titulo1 {
+  font-size: 1.6rem;
+  margin-bottom: 0;
+}
+
+.titulo2 {
+  margin: 0 0 12px 0;
+  background: linear-gradient(0deg, rgba(195,169,34,1) 0%, rgba(255,255,255,1) 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.titulo3 {
+  margin: 0 0 12px 0;
+  font-size: 26px;
+  display: block;
+  font-family: monospace;
+  white-space: nowrap;
+  border-right: 4px solid;
+  width: 28ch;
+  animation: typing 4s steps(28), blink .5s infinite step-end alternate;
+  overflow: hidden;
+}
+
+/* Animaciones críticas */
+@keyframes typing {
+  from { width: 0; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+@keyframes greet {
+  from { transform: rotate(50deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes animacion-tec {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Loading spinner crítico */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+/* Media queries críticas */
+@media (max-width: 600px) {
+  .titulo3 {
+    font-size: 20px;
+  }
+  
+  #hero .left {
+    position: absolute;
+    top: 0;
+    left: 2%;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+  }
+}

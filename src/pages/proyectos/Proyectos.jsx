@@ -1,111 +1,135 @@
-import React from 'react'
-import Card from '../../components/card/Card'
-import "./Proyectos.css"
-import data from "../../data/dataProyects"
-import {useState} from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
+import Card from '../../components/card/Card'
+import { useLanguage } from '../../contexts/LanguageContext'
+import data from "../../data/dataProyects"
+import "./Proyectos.css"
 
-const Proyectos = ({idioma}) => {
+const Proyectos = () => {
   const [currentPage, setCurrentPage] = useState(1);
+  const { language } = useLanguage();
+  
+  // Configuración de paginación
   const itemsPerPage = 6;
-
-  // Calcula el índice inicial y final de los elementos en la página actual
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
 
-  // Function per change page next
+  // Funciones de navegación
   const nextPage = () => {
     setCurrentPage(currentPage + 1);
   };
 
-  // Function per change page prev
   const prevPage = () => {
     setCurrentPage(currentPage - 1);
   };
+
+  // Título con fallback seguro
+  const titulo = language?.proyectos?.titulo || 'Mis Proyectos';
+
   return (
     <div id='mis-proyectos'>
-      <h2>{idioma.proyectos.titulo}</h2>
+      <h2>{titulo}</h2>
+      
       <div className="proyectos">
-       { currentItems?.map((item) => 
-       <Card 
-       key={item.id}
-       nombre={item.nombre}
-       descripcion={item.descripcion}
-       imagen={item.imagen}
-       url={item.url}
-       github={item.github} /> )}
+        {currentItems?.map((item) => (
+          <Card 
+            key={item?.id}
+            nombre={item?.nombre}
+            descripcion={item?.descripcion}
+            imagen={item?.imagen}
+            url={item?.url}
+            github={item?.github} 
+          />
+        ))}
       </div>
-      {/* Botons pagination */}
+      
+      {/* Botones de paginación */}
       <ContainerButton>
         <ButtonPrev onClick={prevPage} disabled={currentPage === 1}>
           <i className="fa-solid fa-arrow-left"></i>
           <p>Anterior</p>
-          </ButtonPrev>
+        </ButtonPrev>
         <ButtonNext onClick={nextPage} disabled={indexOfLastItem >= data.length}>
           <p>Siguiente</p>
           <i className="fa-solid fa-arrow-right"></i>
         </ButtonNext>
       </ContainerButton>
     </div>
-  )
+  );
 }
 
 export default Proyectos
 
+// Styled Components
 const ContainerButton = styled.div`
-display:flex;
-gap:20px;
-`
-const ButtonNext = styled.button`
-  background: white;
-    color: rebeccapurple;
-    width: 170px;
-    height: 35px;
-    border-radius: 50px;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    transition: all 1s;
-    font-weight: bold;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
 
-    &:hover{
-      background: rebeccapurple;
-      color:white;
-    }
-    & i{
-      color: aqua;
-    transition: all 1s;
-    }
-    &:hover i{
-      transform: translateX(20px);    
+  @media (max-width: 768px) {
+    gap: 15px;
+    margin-top: 30px;
   }
-`
-const ButtonPrev = styled.button`
-background: white;
-color: rebeccapurple;
-    width: 170px;
-    height: 35px;
-    border-radius: 50px;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    transition: all 1s;
-    font-weight: bold;
+`;
 
-    &:hover{
-      background: rebeccapurple;
-      color:white;
-    }
-    & i{
-      color: aqua;
-      transition: all 1s;
-    }
-    &:hover i{
-      transform: translateX(-20px);    
+const PaginationButton = styled.button`
+  background: #ffffff;
+  color: #663399;
+  width: 170px;
+  height: 45px;
+  border-radius: 50px;
+  border: 2px solid #663399;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(102, 51, 153, 0.15);
+
+  &:hover:not(:disabled) {
+    background: #663399;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 51, 153, 0.25);
   }
-`
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  i {
+    color: #17c784;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+  }
+  
+  &:hover:not(:disabled) i {
+    color: #17c784;
+  }
+
+  @media (max-width: 480px) {
+    width: 140px;
+    height: 40px;
+    font-size: 0.85rem;
+  }
+`;
+
+const ButtonNext = styled(PaginationButton)`
+  &:hover:not(:disabled) i {
+    transform: translateX(5px);
+  }
+`;
+
+const ButtonPrev = styled(PaginationButton)`
+  &:hover:not(:disabled) i {
+    transform: translateX(-5px);
+  }
+`;

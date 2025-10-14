@@ -69,38 +69,98 @@
     }
   }
 .titulo2{
-    margin: 0;
     margin: 0 0 12px 0;
-    /* padding: 0 80px; */
-    background: rgb(195,169,34);
-background: linear-gradient(0deg, rgba(195,169,34,1) 0%, rgba(255,255,255,1) 100%);
-
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-weight: 700;
+    
+    /* Gradient moderno que combina con tu paleta de colores */
+    background: linear-gradient(135deg, 
+        #ffffff 0%, 
+        #17c784 30%, 
+        #14a06f 60%, 
+        #ffffff 100%
+    );
+    background-size: 200% 200%;
+    background-position: 0% 50%;
+    
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    background-clip: text;
+    
+    /* Sutil animación del gradient */
+    animation: gradient-shift 4s ease-in-out infinite;
+    
+    @media(max-width:600px){
+        font-size: 2.5rem;
+    }
+}
+
+/* Animación sutil del gradient */
+@keyframes gradient-shift {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
 }
 .titulo3{
     margin: 0 0 12px 0;
     font-size: 26px;
     display: block;
     font-family: monospace;
+    color: #ffffff;
     white-space: nowrap;
-    border-right: 4px solid;
+    border-right: 3px solid #17c784;
     width: 28ch;
-    
-    animation: typing 4s steps(28),
-    blink .5s infinite step-end alternate;
     overflow: hidden;
+    
+    /* Animación de escritura más lenta y elegante */
+    animation: 
+        typing 3.5s steps(28) 1s both,
+        blink-cursor 1.5s infinite;
 
     @media(max-width:600px){
-        font-size: 20px;
+        font-size: 18px;
+        width: 28ch;
+        animation: 
+            typing 3s steps(28) 1s both,
+            blink-cursor 1.5s infinite;
     }
 }
 
-@keyframes typing{
-    from{ width: 0;}
+/* Animación de escritura más lenta */
+@keyframes typing {
+    from { 
+        width: 0;
+    }
+    to { 
+        width: 28ch;
+    }
 }
-@keyframes blink{
-    50%{ border-color: transparent;}
+
+/* Parpadeo del cursor más suave y lento */
+@keyframes blink-cursor {
+    0%, 50% { 
+        border-color: #17c784;
+        opacity: 1;
+    }
+    51%, 100% { 
+        border-color: transparent;
+        opacity: 0.7;
+    }
+}
+
+/* Versión móvil */
+@media(max-width:600px){
+    @keyframes typing {
+        from { 
+            width: 0;
+        }
+        to { 
+            width: 28ch;
+        }
+    }
 }
 
 #hero .rigth{
@@ -134,7 +194,6 @@ background: linear-gradient(0deg, rgba(195,169,34,1) 0%, rgba(255,255,255,1) 100
     #hero .left{
         position:absolute;
         top: 0;
-        left: 2%;
         width: 100%;
         height: 100%;
         align-items: center;
