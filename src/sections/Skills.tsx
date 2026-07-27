@@ -19,7 +19,12 @@ export function Skills({ locale, content }: SkillsProps) {
         />
         <div className="skills-grid">
           {content.skills.groups.map((group, index) => (
-            <article className="skill-group" key={group.title}>
+            <article
+              className="skill-group"
+              key={group.title}
+              data-reveal="up"
+              data-delay={String(index + 1)}
+            >
               <div className="skill-group-title">
                 <span>0{index + 1}</span>
                 <h3>{group.title}</h3>

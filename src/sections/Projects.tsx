@@ -48,6 +48,8 @@ export function Projects({ locale, content }: ProjectsProps) {
             <article
               className={`project-card ${project.featured ? "project-featured" : ""}`}
               key={project.name}
+              data-reveal="up"
+              data-spotlight
             >
               <ProjectVisual project={project} />
               <div className="project-copy">

@@ -61,6 +61,7 @@ export function Header({ locale, content }: HeaderProps) {
           </details>
         </div>
       </div>
+      <span className="scroll-progress" aria-hidden="true" />
     </header>
   );
 }
