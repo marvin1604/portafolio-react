@@ -12,7 +12,7 @@ export function Contact({ locale, content }: ContactProps) {
   return (
     <section className="contact-section" id={sectionId}>
       <div className="shell contact-layout">
-        <div className="contact-copy">
+        <div className="contact-copy" data-reveal="left">
           <p className="eyebrow">{content.contact.eyebrow}</p>
           <h2>{content.contact.title}</h2>
           <p>{content.contact.description}</p>
@@ -36,7 +36,13 @@ export function Contact({ locale, content }: ContactProps) {
           </div>
         </div>
 
-        <form className="contact-form" action="https://formspree.io/f/xayrpabr" method="POST">
+        <form
+          className="contact-form"
+          action="https://formspree.io/f/xayrpabr"
+          method="POST"
+          data-reveal="right"
+          data-delay="1"
+        >
           <input type="hidden" name="_subject" value="Portfolio contact" />
           <div className="form-row">
             <label>

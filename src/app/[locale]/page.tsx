@@ -1,5 +1,6 @@
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { ScrollEffects } from "@/components/motion/ScrollEffects";
 import { portfolioContent, isLocale } from "@/data/content";
 import { About } from "@/sections/About";
 import { Contact } from "@/sections/Contact";
@@ -21,6 +22,7 @@ export default async function PortfolioPage({
 
   return (
     <>
+      <ScrollEffects />
       <a className="skip-link" href="#main-content">
         {locale === "it" ? "Vai al contenuto" : "Skip to content"}
       </a>

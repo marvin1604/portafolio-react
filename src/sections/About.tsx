@@ -16,7 +16,7 @@ export function About({ locale, content }: AboutProps) {
     <section className="section" id={sectionId}>
       <div className="shell about-layout">
         <SectionHeading eyebrow={content.about.eyebrow} title={content.about.title} />
-        <div className="about-content">
+        <div className="about-content" data-reveal="up" data-delay="1">
           <div className="about-copy">
             {content.about.paragraphs.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
@@ -26,7 +26,12 @@ export function About({ locale, content }: AboutProps) {
             {content.about.principles.map((principle, index) => {
               const Icon = icons[index];
               return (
-                <div className="principle-card" key={principle}>
+                <div
+                  className="principle-card"
+                  key={principle}
+                  data-reveal="scale"
+                  data-delay={String(index + 1)}
+                >
                   <Icon size={22} aria-hidden="true" />
                   <span>0{index + 1}</span>
                   <p>{principle}</p>

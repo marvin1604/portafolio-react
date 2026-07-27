@@ -19,7 +19,11 @@ export function Experience({ locale, content }: ExperienceProps) {
           intro={content.experience.intro}
         />
         {content.experience.items.map((item) => (
-          <article className="experience-card" key={item.company}>
+          <article
+            className="experience-card"
+            key={item.company}
+            data-reveal="up"
+          >
             <div className="experience-meta">
               <p className="experience-period">{item.period}</p>
               <p>{item.location}</p>

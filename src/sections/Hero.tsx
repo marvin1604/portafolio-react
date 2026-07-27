@@ -12,7 +12,7 @@ export function Hero({
     <section className="hero" aria-labelledby="hero-title">
       <div className="hero-grid-bg" aria-hidden="true" />
       <div className="shell hero-layout">
-        <div className="hero-copy">
+        <div className="hero-copy" data-reveal="hero">
           <p className="eyebrow">
             <MapPin size={15} aria-hidden="true" />
             {content.hero.eyebrow}
@@ -55,7 +55,13 @@ export function Hero({
           </div>
         </div>
 
-        <aside className="hero-card" aria-label="Professional profile summary">
+        <aside
+          className="hero-card"
+          aria-label="Professional profile summary"
+          data-reveal="scale"
+          data-delay="2"
+          data-tilt
+        >
           <div className="availability">
             <span aria-hidden="true" />
             Available for work
