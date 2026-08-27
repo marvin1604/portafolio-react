@@ -38,7 +38,7 @@ export function Header({ locale, content }: HeaderProps) {
           </Link>
           <a
             className="button button-small desktop-cv"
-            href="/cv/Walter_Rodriguez_CV_FullStack_IT.pdf"
+            href="/cv/Walter_Rodriguez_CV_Italia_2026.pdf"
             download
           >
             <Download size={16} aria-hidden="true" />
@@ -54,7 +54,7 @@ export function Header({ locale, content }: HeaderProps) {
                   {item.label}
                 </a>
               ))}
-              <a href="/cv/Walter_Rodriguez_CV_FullStack_IT.pdf" download>
+              <a href="/cv/Walter_Rodriguez_CV_Italia_2026.pdf" download>
                 {content.actions.downloadCv}
               </a>
             </nav>

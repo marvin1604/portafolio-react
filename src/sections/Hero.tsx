@@ -32,7 +32,7 @@ export function Hero({
             </a>
             <a
               className="button button-secondary"
-              href="/cv/Walter_Rodriguez_CV_FullStack_IT.pdf"
+              href="/cv/Walter_Rodriguez_CV_Italia_2026.pdf"
               download
             >
               <Download size={18} aria-hidden="true" />
